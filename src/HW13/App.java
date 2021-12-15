@@ -48,11 +48,12 @@ public class App {
         String confirmPassword = scanner.nextLine();
 
         final String PASSWORD_PATTERN = "\\w{1,19}";
-        if (password.equals(confirmPassword) && password.matches(PASSWORD_PATTERN)) {
-            System.out.println("Password correct");
-        } else {
-            System.out.println("Password incorrect");
+
+            if (password.equals(confirmPassword) && password.matches(PASSWORD_PATTERN)) {
+                System.out.println("Password correct");
+            } else
+                System.out.println("Password incorrect");
         }
     }
-}
+
 

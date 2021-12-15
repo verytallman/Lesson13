@@ -4,7 +4,9 @@ public class WrongLoginException {
     public WrongLoginException() {
 
     }
-    public void exceptionHandler (){
+
+    public void exceptionHandler () throws Exception{
+
 
     }
 
