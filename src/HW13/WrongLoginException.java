@@ -5,8 +5,8 @@ public class WrongLoginException extends Exception {
 
     }
 
-    void WrongLoginException(WrongLoginException e) throws Exception{
-
+    public boolean WrongLoginException() {
+        return false;
     }
 }
 

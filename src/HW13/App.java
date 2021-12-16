@@ -24,29 +24,30 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        loginCheckerAndPassChecker();
-
+        try {
+            loginCheckerAndPassChecker();
+        } catch (WrongLoginException e) {
+            System.err.println(e.WrongLoginException());
+//            e.printStackTrace();
+        } catch (WrongPasswordException a) {
+//            e.printStackTrace();
+            System.err.println(a.WrongPasswordException());
+        }
 
     }
 
 
-    public static void loginCheckerAndPassChecker() {
+    public static void loginCheckerAndPassChecker() throws WrongLoginException, WrongPasswordException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please, enter your login: ");
         String login = scanner.nextLine();
 
         final String LOGIN_PATTERN = "\\w{1,19}";
-        try {
             if (login.matches(LOGIN_PATTERN)) {
-                System.out.println("Login correct");
-            } else {
-                System.out.println("Login incorrect");
-                throw new WrongLoginException();
-            }
-        }catch (WrongLoginException e){
-
+            System.out.println(true);
+        } else {
+            throw new WrongLoginException();
         }
-
 
         System.out.println("Please, enter your password: ");
         String password = scanner.nextLine();
@@ -54,11 +55,10 @@ public class App {
         String confirmPassword = scanner.nextLine();
 
         final String PASSWORD_PATTERN = "\\w{1,19}";
-
             if (password.equals(confirmPassword) && password.matches(PASSWORD_PATTERN)) {
-                System.out.println("Password correct");
+                System.out.println(true);
             } else
-                System.out.println("Password incorrect");
+               throw new WrongPasswordException();
         }
     }
 

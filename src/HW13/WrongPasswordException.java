@@ -5,7 +5,7 @@ public class WrongPasswordException extends Exception{
     }
 
 
-    void WrongPasswordException(){
-
+    public boolean WrongPasswordException() {
+        return false;
     }
 }
