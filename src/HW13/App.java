@@ -36,10 +36,9 @@ public class App {
 
     }
 
-
     public static void loginCheckerAndPassChecker() throws WrongLoginException, WrongPasswordException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please, enter your login: ");
+        System.out.println("Please, enter your login:");
         String login = scanner.nextLine();
 
         final String LOGIN_PATTERN = "\\w{1,19}";
@@ -49,9 +48,9 @@ public class App {
             throw new WrongLoginException();
         }
 
-        System.out.println("Please, enter your password: ");
+        System.out.println("Please, enter your password:");
         String password = scanner.nextLine();
-        System.out.println("Please, confirm your password: ");
+        System.out.println("Please, confirm your password:");
         String confirmPassword = scanner.nextLine();
 
         final String PASSWORD_PATTERN = "\\w{1,19}";
