@@ -24,13 +24,14 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+
         try {
             loginCheckerAndPassChecker();
         } catch (WrongLoginException e) {
             System.err.println(e.WrongLoginException());
-//            e.printStackTrace();
+            e.printStackTrace();
         } catch (WrongPasswordException a) {
-//            e.printStackTrace();
+            a.printStackTrace();
             System.err.println(a.WrongPasswordException());
         }
 
