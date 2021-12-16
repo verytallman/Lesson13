@@ -1,13 +1,9 @@
 package HW13;
 
-public class WrongPasswordException {
+public class WrongPasswordException extends Exception{
     public WrongPasswordException() {
     }
 
-    public static void exceptionHandler (){
-
-
-    }
 
     void WrongPasswordException(){
 

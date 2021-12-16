@@ -1,16 +1,11 @@
 package HW13;
 
-public class WrongLoginException {
+public class WrongLoginException extends Exception {
     public WrongLoginException() {
 
     }
 
-    public void exceptionHandler () throws Exception{
-
-
-    }
-
-    void WrongLoginException() throws Exception{
+    void WrongLoginException(WrongLoginException e) throws Exception{
 
     }
 }

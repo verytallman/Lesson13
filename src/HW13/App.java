@@ -36,11 +36,17 @@ public class App {
         String login = scanner.nextLine();
 
         final String LOGIN_PATTERN = "\\w{1,19}";
-        if (login.matches(LOGIN_PATTERN)) {
-            System.out.println("Login correct");
-        } else {
-            System.out.println("Login incorrect");
+        try {
+            if (login.matches(LOGIN_PATTERN)) {
+                System.out.println("Login correct");
+            } else {
+                System.out.println("Login incorrect");
+                throw new WrongLoginException();
+            }
+        }catch (WrongLoginException e){
+
         }
+
 
         System.out.println("Please, enter your password: ");
         String password = scanner.nextLine();
