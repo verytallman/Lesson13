@@ -21,18 +21,13 @@ package HW13.modules;
 
 
 
-import HW13.WrongLoginException;
-import HW13.WrongPasswordException;
-import HW13.modules.executor.ExecutorManager;
 
-import java.util.Scanner;
+import HW13.modules.executor.ExecutorManager;
 
 public class App {
     public static void main(String[] args) {
         ExecutorManager.execute();
     }
-
-
-    }
+}
 
 
